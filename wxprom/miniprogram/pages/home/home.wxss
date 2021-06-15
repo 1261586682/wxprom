@@ -6,7 +6,7 @@ page {
   line-height: 1.6;
 }
 .page-body{
-  padding-top: 60rpx;
+  padding-top: 0rpx;
 }
 
 .page-section{

@@ -1,17 +1,44 @@
-// miniprogram/pages/mine/mine.js
+// miniprogram/pages/My/My.js
+const jinrishici = require('../../utils/jinrishici.js')
 Page({
 
+  //引用
+  // const jinrishici = require('../../utils/jinrishici.js'),
+  
   /**
    * 页面的初始数据
    */
   data: {
-
+    userInfo:null,
+    wordsList:null
+  },
+   
+  
+  //获取用户信息
+  login(){
+    wx.getUserProfile({
+      desc: '用于完善用户资料', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
+      lang:'zh_CN',
+      success: (res) => {
+        this.setData({
+          userInfo: res.userInfo
+        })
+        console.log(res)
+      },
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+    //今日诗词
+    jinrishici.load(result => {
+      // 下面是处理逻辑示例
+      console.log(result)
+      this.setData({jinrishici: result.data})
+    })
 
   },
 

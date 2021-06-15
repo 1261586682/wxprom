@@ -1,0 +1,92 @@
+/* miniprogram/pages/My/My.wxss */
+
+/* 容器1样式 */
+.containerOne{
+  height: 260px;
+  background:#FB7299;
+  display: flex;
+}
+
+/* 笑脸图片样式 */
+.smile{
+  height: 200rpx;
+  width: 200rpx;
+  position:absolute;
+  top:20rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius:40%;
+  overflow: hidden;
+}
+
+/* 登录按钮样式 */
+.buttonType{
+  position: absolute;
+  color: #ffffff;
+  font:caption;
+  font-size: 38rpx;
+  font-weight: 500;
+  top: 280rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 用户的昵称 */
+.usernickName{
+  position: absolute;
+  color: #ffffff;
+  font-size: 42rpx;
+  font-weight: bold;
+  top:250rpx;
+  left: 50%;
+  transform: translateX(-50%);
+} 
+
+/* 用户所在省 */
+.userprovince{
+  position: absolute;
+  color: #ffffff;
+  font-size: 42rpx;
+  top:320rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 用户所在城市 */
+.usercity{
+  position: absolute;
+  color: #ffffff;
+  font-size: 42rpx;
+  top:390rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 容器2样式 */
+.containerTwo{
+  margin-top: 60rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  height: 400rpx;
+}
+
+/* 诗词样式 */
+.poetryType{
+  position: absolute;
+  font-size: large;
+  font-weight: 600;
+  margin-top: 10%;
+  margin: 60rpx 20rpx;
+  color: #333333;
+}
+
+
+/* 标签样式 */
+.authroAndTitle{
+  position: absolute;
+  font-size: medium;
+  font-weight:bold;
+  margin-top: 30%;
+  right: 10%;
+  
+}

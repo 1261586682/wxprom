@@ -1,0 +1,30 @@
+<!--miniprogram/pages/My/My.wxml-->
+<view class="containerOne">
+  <view>
+    <view wx:if="{{userInfo!=null}}">
+      <image class="smile" src="{{userInfo.avatarUrl}}"></image>
+    </view>
+    <view wx:else>
+      <image class="smile" src="../../images/smile.png"></image>
+    </view>
+
+    <view wx:if="{{userInfo!=null}}">
+
+      <view class="usernickName">{{userInfo.nickName}}</view>
+      <view class="userprovince">{{userInfo.province}}</view>
+      <view class="usercity">{{userInfo.city}}</view>
+    </view>
+    <view wx:else>
+      <button class="buttonType" bindtap="login" plain="true">点击登录</button>
+    </view>
+  </view>
+</view>
+<view wx:if="{{userInfo!=null}}" class="containerTwo">
+  <!-- wx:if="{{userInfo!=null}}" 调试完再放入 -->
+  <view class="poetryType">
+    {{jinrishici.content}}
+  </view>
+  <view class="authroAndTitle">
+    《{{jinrishici.origin.title}}》 {{jinrishici.origin.author}}
+  </view>
+</view>
